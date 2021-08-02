@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tinh tuoi</title>
+</head>
+<body>
+<script>
+  let date = new Date();
+  let currentYear = date.getFullYear();
+  let age;
+  function calculateAge(year) {
+    year = +year;
+    if (year > currentYear) {
+      alert("Khong hop le.")
+    } else {
+      age = currentYear - year;
+    }
+    return age;
+  }
+  alert(calculateAge(prompt("Enter your birth year")));
+</script>
+</body>
+</html>

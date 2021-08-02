@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tinh tong duong cheo</title>
+</head>
+<body>
+<script>
+  function calculateSumOfDiagonal(matrix) {
+    let sum = 0;
+    for (let i = 0; i < matrix.length; i++) {
+      sum += matrix[i][i];
+    }
+    return sum;
+  }
+
+  let matrix = [[1, 2, 3], [5, 4, 8], [9, 3, 6]];
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+      document.write(matrix[i][j] + '&nbsp;&nbsp;&nbsp;&nbsp;');
+    }
+    document.write('<br>');
+  }
+  document.write('Sum of elements on main diagonal of matrix is: ' + calculateSumOfDiagonal(matrix));
+</script>
+</body>
+</html>

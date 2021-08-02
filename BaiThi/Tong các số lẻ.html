@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tong cac so le</title>
+</head>
+<body>
+<script>
+    let array = [1, 4, 5, 7, 2, -5, 15, -6, -3, -4, 0, -2];
+
+    function sumOfOddNumbers(arr) {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 !== 0) {
+                sum += arr[i];
+            }
+        }
+        return sum;
+    }
+
+    console.log('Sum of odd numbers in array is: ' + sumOfOddNumbers(array));
+
+</script>
+</body>
+</html>

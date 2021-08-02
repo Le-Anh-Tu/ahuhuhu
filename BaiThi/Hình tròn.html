@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+<canvas
+        id="canvas1"
+        width="200"
+        height="200"
+        style="background-color: lavender"
+></canvas>
+<script>
+  class Cricle {
+    x;
+    y;
+    radius;
+    color;
+    constructor(x, y, radius, color) {
+      this.x = x;
+      this.y = y;
+      this.radius = radius;
+      this.color = color;
+    }
+    getChuvi() {
+      return 2 * this.radius * Math.PI;
+    }
+
+    getDientich() {
+      return this.radius * this.radius * Math.PI;
+    }
+
+    render(canvas) {
+      var ctx = canvas.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0.5 * Math.PI, 3.5 * Math.PI);
+      ctx.fillStyle = this.color;
+      ctx.fill();
+    }
+  }
+
+  var hinhTron = new Cricle(40, 50, 30, "#FF3300");
+
+  var canvas1 = document.getElementById("canvas1");
+
+  hinhTron.render(canvas1)
+
+
+</script>
+</body>
+
+</html>

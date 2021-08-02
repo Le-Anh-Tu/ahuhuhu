@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+<script>
+  function findMaxScore(mang) {
+    var max = mang[0];
+
+    for (let i in mang) {
+      if (mang[i] > max) {
+        max = mang[i];
+      }
+    }
+    return max;
+  }
+  var mang1 = [10, 5, 2, 8, -1, 6, 8];
+  var mang2 = [2,4,0,5,1];
+  var mang3 = [8,6,2, 6,1,1,4];
+  console.log(findMaxScore(mang1));
+  console.log(findMaxScore(mang2));
+  console.log(findMaxScore(mang3));
+</script>
+</body>
+
+</html>
